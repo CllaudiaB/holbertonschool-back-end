@@ -22,8 +22,7 @@ if __name__ == "__main__":
             user_name = item.get('username')
 
     file = open(str(sys.argv[1]) + ".csv", 'w')
-    csv_file = csv.writer(file)
-    spamreader = csv.reader(file, quoting=csv.QUOTE_ALL)
+    csv_file = csv.writer(file, quoting=csv.QUOTE_ALL)
     for item in todos:
         li = []
         if str(item.get('userId')) == str(sys.argv[1]):
