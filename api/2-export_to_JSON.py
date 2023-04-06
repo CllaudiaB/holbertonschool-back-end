@@ -15,7 +15,6 @@ if __name__ == "__main__":
     user = response_user.json()
     todos = response_todos.json()
 
-
     for item in user:
         if str(sys.argv[1]) == str(item.get('id')):
             n = item.get('id')
@@ -34,5 +33,6 @@ if __name__ == "__main__":
 
     _dict1 = {}
     _dict1[str(sys.argv[1])] = li
+    _json = json.dumps(_dict1)
     with open(str(sys.argv[1]) + ".json", "w") as file:
-        json.dump(_dict1, file)
+        file.write(_json)
