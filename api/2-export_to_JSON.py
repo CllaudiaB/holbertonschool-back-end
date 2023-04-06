@@ -25,7 +25,7 @@ if __name__ == "__main__":
         if int(sys.argv[1]) == item.get('userId'):
             _dict['task'] = item.get('title')
             _dict['completed'] = item.get('completed')
-            _dict1['username'] = user_name
+            _dict['username'] = user_name
             li.append(_dict)
 
     _dict1 = {}
