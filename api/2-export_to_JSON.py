@@ -16,14 +16,14 @@ if __name__ == "__main__":
     todos = response_todos.json()
 
     for item in user:
-        if str(sys.argv[1]) == str(item.get('id')):
+        if int(sys.argv[1]) == item.get('id'):
             n = item.get('id')
             user_name = item.get('username')
 
     li = []
     for item in todos:
         _dict = {}
-        if str(sys.argv[1]) == str(item.get('userId')):
+        if int(sys.argv[1]) == item.get('userId'):
             title = item.get('title')
             task = item.get('completed')
             _dict['title'] = title
