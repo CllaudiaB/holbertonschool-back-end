@@ -9,8 +9,8 @@ import sys
 
 if __name__ == "__main__":
     response_user = requests.get("https://jsonplaceholder.typicode.com/users")
-    response_todos = requests.get("https://jsonplaceholder.typicode.com/todos")
     user = response_user.json()
+    response_todos = requests.get("https://jsonplaceholder.typicode.com/todos")
     todos = response_todos.json()
 
     for item in user:
@@ -32,5 +32,5 @@ if __name__ == "__main__":
     _dict1[n] = li
 
     json_dict = json.dumps(_dict1)
-    with open(str(argv[1]) + ".json", "w") as file:
+    with open(str(sys.argv[1]) + ".json", "w") as file:
         file.write(json_dict)
