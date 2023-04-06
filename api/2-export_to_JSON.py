@@ -32,7 +32,7 @@ if __name__ == "__main__":
             li.append(_dict)
 
     _dict1 = {}
-    _dict1[str(sys.argv[1])] = li
+    _dict1[n] = li
     _json = json.dumps(_dict1)
     with open(str(sys.argv[1]) + ".json", "w") as file:
         file.write(_json)
